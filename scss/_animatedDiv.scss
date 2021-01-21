@@ -1,0 +1,55 @@
+$anime-time: 12s;
+
+$box-size: 400px;
+$clip-distance: .05;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 2px;
+
+$main-color: #69ca62;
+
+div {
+  width: $box-size;
+  height: $box-size;
+  margin: auto;
+  color: $main-color;
+  background-color: #000000;
+  position: absolute;
+  top: 500px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 0 1px rgba($main-color, .5);
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    z-index: -1;
+    margin: (-1 * .05 * 100%);
+    box-shadow: inset 0 0 0 2px;
+    animation: clipMe 12s linear infinite;
+  }
+  &::before {
+    animation-delay: $anime-time * -.5;
+  }
+
+}
+@keyframes clipMe {
+    0%, 100% {clip: rect(0px, $clip-size, $path-width, 0px); }
+    25% {clip: rect(0px, $path-width, $clip-size, 0px); }
+    50% {clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px); }
+    75% {clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width); }
+  }
+body {
+    position: relative;
+    background-color: #0f222b;
+  }
+
+  // *,
+  // *::before,
+  // *::after {
+  //   box-sizing: border-box;
+  // }
