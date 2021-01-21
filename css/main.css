@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,24 +50,32 @@ table {
 }
 
 .header {
-  background-color: #0D3B66;
   width: 100%;
   height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 10px 8px 3px #8B2635;
+  box-shadow: 0 5px 8px 3px #0D3B66;
 }
 
 .header__logo {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: #ffffff;
+  color: #0D3B66;
+}
+
+.header__logo-element {
+  font-size: 20px;
+}
+
+.header__logo-element {
+  font-family: 'Hachi Maru Pop', cursive;
+  font-weight: bold;
 }
 
 .header__logo:hover {
-  color: #8B2635;
+  color: #56a2e9;
 }
 
 .header__nav {
@@ -80,13 +89,14 @@ table {
 }
 
 .nav__list-link {
+  font-weight: bold;
   text-decoration: none;
-  color: #ffffff;
+  color: #0D3B66;
   font-size: 20px;
 }
 
 .nav__list-link:hover {
-  color: #8B2635;
+  color: #56a2e9;
 }
 
 /*# sourceMappingURL=main.css.map */

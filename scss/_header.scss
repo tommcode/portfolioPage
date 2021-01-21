@@ -1,20 +1,25 @@
 .header {
-    background-color: $main-color;
+    // background-color: $main-color;
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 10px 8px 3px $hover-color;
+    box-shadow: 0 5px 8px 3px $font-color;
     &__logo {
         display: flex;
         flex-direction: column;
         text-decoration: none;
         color: $font-color;
         &-element {
+            font-size: 20px;
+        }
+        &-element {
+            font-family: 'Hachi Maru Pop', cursive;
+            font-weight: bold;
         }
         &:hover {
-            color: $hover-color;
+            color: lighten($font-color, 40%)
         }
     }
     &__nav {
@@ -26,11 +31,12 @@
     justify-content: space-around;
     flex-direction: row;
     &-link {
+        font-weight: bold;
         text-decoration: none;
         color: $font-color;
         font-size: 20px;
         &:hover{
-            color: $hover-color;
+            color: lighten($font-color, 40%);
         }
     }
     &-item {
